@@ -28,9 +28,9 @@ export default function App() {
         <p className={styles.title}>Links Úteis:</p>
         <div className={styles.links}>
           
-          <button  onClick={routerForm} className={styles.link}><Image src={ImageForm} width={300} height={125}/></button>
-          <button onClick={routerHome} className={styles.link}><Image src={ImageHome} width={300} height={125}/></button>
-          <button  onClick={routerLink} className={styles.link}><Image src={ImageLink} width={300} height={125}/></button>
+          <button  onClick={routerForm} className={styles.link}><Image alt='imagem'src={ImageForm} width={300} height={125}/></button>
+          <button onClick={routerHome} className={styles.link}><Image alt='imagem' src={ImageHome} width={300} height={125}/></button>
+          <button  onClick={routerLink} className={styles.link}><Image alt='imagem' src={ImageLink} width={300} height={125}/></button>
   
         </div>
       </div>
