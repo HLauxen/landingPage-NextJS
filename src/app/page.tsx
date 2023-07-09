@@ -31,10 +31,7 @@ export default function App() {
           <button  onClick={routerForm} className={styles.link}><Image src={ImageForm} width={300} height={125}/></button>
           <button onClick={routerHome} className={styles.link}><Image src={ImageHome} width={300} height={125}/></button>
           <button  onClick={routerLink} className={styles.link}><Image src={ImageLink} width={300} height={125}/></button>
-          
-          {/* <a href="/form" className={styles.link}><Image src={ImageForm} width={300} height={125}/></a>
-          <a href="/home" className={styles.link}><Image src={ImageHome} width={300} height={125}/></a>
-          <a href="/instagram" className={styles.link}><Image src={ImageLink} width={300} height={125}/></a> */}
+  
         </div>
       </div>
     </main>

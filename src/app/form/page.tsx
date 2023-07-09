@@ -1,8 +1,6 @@
 "use client"
-import Image from "next/image";
+
 import styles from './form.module.css'
-import Spacing from "@/components/spacing";
-import ImageData from '../../assets/Form/pexels-sebastiaan-stam-1480690.jpg'
 import { useState } from "react";
 import classNames from 'classnames'
 
@@ -14,7 +12,6 @@ import { useSearchParams } from 'next/navigation';
 
 import {AxiosError} from "axios";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import { Check } from "phosphor-react";
 
 const registerFormSchema = z.object({
@@ -135,23 +132,6 @@ export default function Form() {
                         <p>Aulas atualizadas com as últimas novidades, técnicas e estratégias para anunciar nas maiores plataformas.</p>
                     </div>
             </div>
-
-            {/*  <div>
-                <div>
-                    <h1>Participe das aulas ao vivo para aprender todas as estratégias e segredos para criar anúncios online com o melhor especialista do mercado.</h1>
-                    <p>Durante as aulas, você terá a oportunidade de aprender a fazer anúncios online com o melhor gestor de tráfego do Brasil. Todos os ensinamentos são altamente detalhados e organizados e seguem o que chamados de "filosofia Sobral de Tráfego".</p>
-                </div>
-                <div>
-                    <p>Pedro Sobral é o "mago dos anúncios online", já tendo gerenciado o investimento de milhões de reais em campanhas online, assim como atualmente trabalha com grandes players
-do mercado digital como
-Mairo Vergara, Nathália Arcuri, Wendell Carvalho, dentre muitos outros.</p>
-                    <h1>Image</h1>
-                </div>
-            </div>
-
-            <footer>
-                <h1>Politica de privacidade</h1>
-            </footer> */}
         </div>
     )
 }
