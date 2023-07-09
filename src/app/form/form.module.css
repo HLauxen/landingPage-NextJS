@@ -1,0 +1,238 @@
+.container * {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+.data {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px;
+    margin: 0;
+    height: 85vh;
+    width: 100%;
+    flex-wrap: wrap-reverse;
+    background-image: url('../../assets/Form/pexels-sebastiaan-stam-1480690.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.data__details {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+    .data__details h1 {
+        font-size: 32px;
+        width: 100%;
+    }
+        .data__details strong {
+            color: #0bd5f8;
+        }
+    .data__details p {
+        font-size: 20px;
+        width: 100%;
+    }
+
+.inputBox {
+    position: relative;
+    width: 100%;
+}
+.input {
+    height: 40px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(78, 78, 78);
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+.input__email {
+    height: 40px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(78, 78, 78);
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+.input__focus {
+    border-color: #0bd5f8;
+}
+.input__focus__email {
+    border-color: #0bd5f8;
+}
+.label {
+    text-transform: uppercase;
+    color:rgb(78, 78, 78);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+.label__email {
+    text-transform: uppercase;
+    color:rgb(78, 78, 78);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    transition: 0.2s;
+}
+.label__focus {
+    color: #0bd5f8;
+    padding: 3px;
+    background-color: black;
+    font-size:0.6rem;
+    transform: translateY(-175%);
+}
+.label__focus__email {
+    color: #0bd5f8;
+    padding: 3px;
+    background-color: black;
+    font-size:0.6rem;
+    transform: translateY(-175%);
+}
+
+.buttonDisabled {
+    border: 1px solid #0bd5f8;
+    background-color: transparent;
+    color: #0bd5f8;
+    border-radius: 6px;
+    width:100%;
+    height: 36px;
+    transition: 0.5s;
+
+}
+    .buttonDisabled:hover {
+        border: 1px solid #0bd5f8;
+        background-color: #0bd5f8;
+        box-shadow: 0 0 8px #0bd5f8;
+        color: black;
+        border-radius: 6px;
+        width:100%;
+        height: 36px;
+    }
+    .buttonActive {
+        display: block;
+        pointer-events: none;
+        inset: 0;
+        animation: sumir 0.2s forwards;
+        border: 1px solid #0bd5f8;
+        background-color: #0bd5f8;
+        /* display: none; */
+        border-radius: 6px;
+        width:100%;
+        height: 36px;
+    }
+/*     .buttonActive[closing] {
+        display: block;
+        pointer-events: none;
+        inset: 0;
+        animation: sumir 0.2s forwards;
+    }
+    .buttonActive[closing]:backdrop {
+        animation: sumir 500ms forwards;
+    } */
+    .check {
+        width: 100%;
+        color: #0bd5f8;
+        opacity: 0;
+    }
+    .checkActive {
+        width: 100%;
+        color: #0bd5f8;
+        animation: aparecer 1s forwards;
+        position: sticky;
+    }
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+}
+
+@keyframes sumir {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+.data__image {
+    width: 30%;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.spacing {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    background: #0bd5f8;
+    color: black;
+}
+.spacing__text {
+    width: 27%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width : 500px) {
+    .data {
+        justify-content: center;
+        padding: 0;
+        position: relative;
+    }
+    .data__details {
+        width: 90%;
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(108%);
+    }
+    .data__details h1 {
+        font-size: 25px;
+    }
+    .data__details p {
+        font-size: 17px;
+    }
+
+    .spacing {
+        height: 50vh;
+    }
+    .spacing__text {
+        padding: 20px;
+        font-size: 14px;
+    }
+}

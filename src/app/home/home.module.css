@@ -1,0 +1,337 @@
+/* .container {
+    
+} */
+
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('../../assets/Test/ales-nesetril-Im7lZjxeLhg-unsplash.jpg');
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.description__details {
+    opacity: 0;
+    width: 100%;
+    max-width: 40%;
+    animation: aparecer 1s forwards;
+    animation-delay: 0.8s;
+    
+}
+
+
+.description__details h1{
+    font-size: 30px;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.description button {
+    background-color: transparent;
+    align-self: center;
+    color: white;
+    width: 50px;
+    height: 20px;
+    border: 0px transparent;
+    position: absolute;
+    bottom: 30px;
+    margin: auto;
+    transition: 0.2s;
+}
+    .description button:hover {
+        transform: scale(1.1);
+        color: #00dfc4;
+    }
+    .clicked {
+        animation: sumir 0.8s forwards;
+    }
+
+.clickedUpButton {
+    align-self: center;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    width: 50px;
+    height: 20px;
+    border: 0px transparent;
+    bottom: 30px;
+    margin: auto;
+    transition: 0.2s;
+}
+    .clickedUpButton:hover {
+        transform: scale(1.1);
+        color: #00dfc4;
+    }
+
+    .clickedUp {
+        animation: buttonUp 0.8s forwards;
+    }
+
+
+.advertising {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 100px;
+    
+    background-image: url('../../assets/Test/nubelson-fernandes-iE71-TMrrkE-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.advertising__details {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.advertising__details h1 {
+    font-size: 30px;
+    width: 100%;
+}
+.advertising__details strong {
+        color: #0bd5f8;
+}
+.advertising__details .p__principal {
+    font-size: 20px;
+    width: 100%;
+    gap: 20px;
+}
+.advertising__details .p__secundario {
+    opacity: 0;
+}
+.advertising__details__clicked {
+    animation: aparecer 1s forwards;
+}
+
+.about {
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-left: 100px;
+    background-image: url('../../assets/Test/ramon-salinero-vEE00Hx5d0Q-unsplash.jpg');
+    background-position: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about__details {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about__details h1 {
+
+    font-size: 30px;
+    width: 100%;
+}
+.about__details p {
+    font-size: 20px;
+    width: 100%;
+    gap: 20px;
+}
+
+.buttonDisabled {
+    border: 1px solid #0bd5f8;
+    background-color: transparent;
+    color: #0bd5f8;
+    border-radius: 6px;
+    width:100%;
+    height: 36px;
+    transition: 0.5s;
+
+}
+    .buttonDisabled:hover {
+        border: 1px solid #0bd5f8;
+        background-color: #0bd5f8;
+        box-shadow: 0 0 8px #0bd5f8;
+        color: black;
+        border-radius: 6px;
+        width:100%;
+        height: 36px;
+    }
+    .buttonActive {
+        display: block;
+        pointer-events: none;
+        inset: 0;
+        animation: sumirButton 0.2s forwards;
+        border: 1px solid #0bd5f8;
+        background-color: #0bd5f8;
+        /* display: none; */
+        border-radius: 6px;
+        width:100%;
+        height: 36px;
+    }
+
+.check {
+        width: 100%;
+        color: #0bd5f8;
+        opacity: 0;
+    }
+    .checkActive {
+        width: 100%;
+        color: #0bd5f8;
+        animation: aparecerCheck 1s forwards;
+        position: sticky;
+    }
+
+
+    @keyframes sumir {
+        from {
+    
+        }
+        to {
+            transform: translateY(28px);
+        }
+    }
+    @keyframes buttonUp {
+        from {
+    
+        }
+        to {
+            transform: translateY(-28px);
+        }
+    }
+    @keyframes aparecer {
+        from {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+@keyframes aparecerCheck {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+}
+@keyframes sumirButton {
+    0% {
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .description {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 70px;
+    }
+        .description__details {
+            opacity: 0;
+            width: 100%;
+            max-width: 95%;
+        }
+    
+            .description__details h1{
+                padding-left: 30px;
+                font-size: 30px;
+                width: 100%;
+            }
+
+            /* .description .img {
+                width: 100%;
+                height: 90px;
+            } */
+
+            .advertising {
+                align-items: center;
+                
+                margin: 0;
+                padding: 0;
+                flex-wrap: wrap;
+            }
+            .advertising__details {
+                width: 100%;
+                /* max-width: 350px; */
+                flex-direction: column;
+                /* gap: 340px; */
+                justify-content:flex-start;
+                padding: 20px;
+            }
+            .advertising__details h1 {
+                justify-content: flex-start;
+                font-size: 30px;
+                width: 100%;
+                padding-bottom: 340px;
+            }
+            .advertising__details .p__principal {
+                opacity: 0;
+                display: none;
+                /* pointer-events: none;
+                inset: 0; */
+            }
+            .advertising__details .p__secundario {
+                display: block;
+                opacity: 1;
+                font-size: 20px;
+                width: 100%;
+                /* inset: 0; */
+                max-height: 100vh;
+                padding: 20px;
+            }
+
+    .about {
+        padding-left: 0px;
+    }
+        .about__details {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+        }
+            
+            .about__details h1 {
+                padding-bottom: 70px;
+                font-size: 30px;
+                width: 100%;
+            }
+            .about__details p {
+                padding-top: 200px;
+                font-size: 20px;
+                width: 100%;
+                gap: 20px;
+            }
+
+}
