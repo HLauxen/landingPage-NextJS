@@ -36,11 +36,11 @@ export default function Form() {
     })
     const searchParams = useSearchParams()
 
-    useEffect(() => {
+    /* useEffect(() => {
         if (searchParams.get('email')) {
             setValue('email', String(searchParams.get('email')))
         }
-    }, /* [searchParams.get?.('email'), setValue] */ [setValue])
+    }, [searchParams.get?.('email'), setValue] [setValue]) */
     
     async function HandleRegister(data: RegisterFormData) {
         setDisplayButton(true);
