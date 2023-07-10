@@ -126,7 +126,7 @@ export default function Form() {
                         <p>Alavanque o seu negócio com o melhor especialista do mercado digital.</p>
                     </div>
                     <div className={styles.spacing__text}>
-                        <p>Conhecimento tirado direto do "campo de batalha", fruto de milhões de reais investidos em ads online.</p>
+                        <p>Conhecimento tirado direto do campo de batalha, fruto de milhões de reais investidos em ads online.</p>
                     </div>
                     <div className={styles.spacing__text}>
                         <p>Aulas atualizadas com as últimas novidades, técnicas e estratégias para anunciar nas maiores plataformas.</p>
