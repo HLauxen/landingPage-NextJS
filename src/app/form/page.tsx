@@ -14,7 +14,7 @@ import {AxiosError} from "axios";
 import axios from "axios";
 import { Check } from "phosphor-react";
 
-const registerFormSchema = z.object({
+const registerFormSchema:any = z.object({
     email: z.string()
         /* .regex(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i, {
             message: 'Email indefinido'
@@ -36,11 +36,11 @@ export default function Form() {
     })
     const searchParams = useSearchParams()
 
-    /* useEffect(() => {
+    useEffect(() => {
         if (searchParams.get('email')) {
             setValue('email', String(searchParams.get('email')))
         }
-    }, [searchParams.get?.('email'), setValue] [setValue]) */
+    }, [searchParams.get?.('email'), setValue])
     
     async function HandleRegister(data: RegisterFormData) {
         setDisplayButton(true);
