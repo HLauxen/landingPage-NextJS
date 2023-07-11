@@ -33,3 +33,10 @@ export async function POST(req: NextRequest) {
 /* export async function GET(req:NextRequest) {
     return NextResponse.json({name: 'henrique'});
 } */
+
+export async function GET(req: NextRequest) {
+    const data = await req.json()
+    /* const { name, email, id } = data; */
+    
+    return NextResponse.json(data)
+}
